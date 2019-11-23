@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="NewWizardAction">
+		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.fx.ide.jdt.ui.javafx"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.fx.ide"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.internal.QuickAccess">
+		<item key="dialogHeight" value="950"/>
+		<item key="dialogWidth" value="1161"/>
+		<list key="orderedElements">
+			<item value="org.eclipse.ui.file.restartWorkbench"/>
+		</list>
+		<list key="orderedProviders">
+			<item value="org.eclipse.ui.commands"/>
+		</list>
+		<list key="textEntries">
+			<item value="1"/>
+		</list>
+		<list key="textArray">
+			<item value="restart"/>
+		</list>
+	</section>
+	<section name="WorkbenchPreferenceDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="526"/>
+		<item key="DIALOG_Y_ORIGIN" value="56"/>
+	</section>
+</section>

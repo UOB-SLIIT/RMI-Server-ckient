@@ -1,0 +1,69 @@
+package com.Server.rmiinterface;
+
+import java.rmi.Naming;
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
+
+//import com.mkyong.rmiinterface.RMIInterface;
+
+public class ServerOperation extends UnicastRemoteObject implements RMIInterface{
+
+    private static final long serialVersionUID = 1L;
+
+    protected ServerOperation() throws RemoteException {
+
+        super();
+
+    }
+
+    @Override
+	public String Authenticate(String username, String password) throws RemoteException {
+		String uname = "admin";
+		String pass = "12345";
+		String token ="";
+		
+		if(uname == username && pass == password) {
+			System.out.println("Logged in");
+			token = Math.random()+uname;
+		}
+		return token;
+	}
+
+	@Override
+	public boolean isValid(String username, String token) throws RemoteException {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public String getProduct(String username, String token) throws RemoteException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public float findPrice(int itemId, String username, String token) throws RemoteException {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+  
+
+    public static void main(String[] args){
+
+        try {
+
+            Naming.rebind("//localhost/MyServer", new ServerOperation());            
+            System.err.println("Server ready");
+
+        } catch (Exception e) {
+
+            System.err.println("Server exception: " + e.toString());
+            e.printStackTrace();
+
+        }
+
+    }
+
+	
+
+}
